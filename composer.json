@@ -1,0 +1,25 @@
+{
+    "name": "gsdevme/jumpcloud",
+    "description": "Simple library to authenicate with Jumpclouds REST Authorization API.",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "JumpCloud\\": [
+                "src/JumpCloud"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2",
+        "phpunit/phpunit": "^5.3",
+        "psr/log": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3",
+        "mockery/mockery": "^0.9.4"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

@@ -20,10 +20,15 @@ class ResponseBuilder
         $this->response = $response;
     }
 
+    /**
+     * @return Response
+     */
     public function build()
     {
         if ($this->response->getStatusCode() === 200) {
-            return new Response();
+            return new Response(Response::AUTHORISED);
         }
+
+        return new Response(Response::UNAUTHORISED);
     }
 }

@@ -7,6 +7,9 @@ use GuzzleHttp\Psr7\Request;
 class RequestBuilder
 {
     /** @var string */
+    private $key;
+
+    /** @var string */
     private $username;
 
     /** @var string */
@@ -18,12 +21,14 @@ class RequestBuilder
     /**
      * RequestBuilder constructor.
      *
+     * @param      $key
      * @param      $username
      * @param      $password
      * @param null $tag
      */
-    public function __construct($username, $password, $tag = null)
+    public function __construct($key, $username, $password, $tag = null)
     {
+        $this->key = $key;
         $this->username = $username;
         $this->password = $password;
         $this->tag = $tag;
@@ -36,7 +41,8 @@ class RequestBuilder
     {
         $headers = [
             'X-Client' => Request::class,
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
+            'x-api-key' => $this->key
         ];
 
         $body = [

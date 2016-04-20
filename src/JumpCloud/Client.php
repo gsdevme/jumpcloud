@@ -5,6 +5,7 @@ namespace JumpCloud;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Psr7\Request;
 use JumpCloud\Builder\RequestBuilder;
+use JumpCloud\Provider\CredentialsProviderInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
@@ -56,8 +57,14 @@ class Client
      */
     public function authenticate($username, $password)
     {
-        $request = (new RequestBuilder($username, $password))->build();
-        $this->logger->debug(sprintf('Jumpcloud authenticate for user: %s', $username));
+        $request = (new RequestBuilder($this->credentialsProvider->getKey(), $username, $password))->build();
+
+        $this->logger->debug(
+            'Jumpcloud authenticate for user',
+            [
+                'username' => $username,
+            ]
+        );
 
         return $this->handleRequest($request);
     }
@@ -76,8 +83,15 @@ class Client
      */
     public function authorization($username, $password, $tag)
     {
-        $request = (new RequestBuilder($username, $password, $tag))->build();
-        $this->logger->debug(sprintf('Jumpcloud authorization for user: %s', $username));
+        $request = (new RequestBuilder($this->credentialsProvider->getKey(), $username, $password, $tag))->build();
+
+        $this->logger->debug(
+            'Jumpcloud authorization for user with tag',
+            [
+                'username' => $username,
+                'tag'      => $tag,
+            ]
+        );
 
         return $this->handleRequest($request);
     }

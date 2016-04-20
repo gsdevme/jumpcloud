@@ -4,6 +4,7 @@ namespace JumpCloud;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
+use JumpCloud\Builder\ResponseBuilder;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
@@ -37,10 +38,6 @@ class RequestHandler
     {
         $response = $client->send($request);
 
-        if ($response->getStatusCode() === 200) {
-            return new Response(Response::AUTHORISED);
-        }
-
-        return new Response(Response::UNAUTHORISED);
+        return (new ResponseBuilder($response)->build());
     }
 }

@@ -9,7 +9,7 @@ namespace JumpCloud;
  */
 class Response
 {
-    const AUTHORISED = true;
+    const AUTHORISED   = true;
     const UNAUTHORISED = false;
 
     /** @var bool */

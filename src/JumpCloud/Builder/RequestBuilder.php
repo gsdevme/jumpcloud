@@ -6,6 +6,8 @@ use GuzzleHttp\Psr7\Request;
 
 class RequestBuilder
 {
+    const ENDPOINT = 'https://auth.jumpcloud.com/authenticate';
+
     /** @var string */
     private $key;
 
@@ -17,6 +19,9 @@ class RequestBuilder
 
     /** @var string|null */
     private $tag;
+
+    /** @var string */
+    private $endpoint;
 
     /**
      * RequestBuilder constructor.
@@ -32,6 +37,15 @@ class RequestBuilder
         $this->username = $username;
         $this->password = $password;
         $this->tag = $tag;
+        $this->endpoint = self::ENDPOINT;
+    }
+
+    /**
+     * @param $endpoint
+     */
+    public function setEndpoint($endpoint)
+    {
+        $this->endpoint = $endpoint;
     }
 
     /**
@@ -40,20 +54,20 @@ class RequestBuilder
     public function build()
     {
         $headers = [
-            'X-Client' => Request::class,
+            'X-Client'     => Request::class,
             'Content-Type' => 'application/json',
-            'x-api-key' => $this->key
+            'x-api-key'    => $this->key,
         ];
 
         $body = [
             'username' => $this->username,
-            'password' => $this->password
+            'password' => $this->password,
         ];
 
         if ($this->tag !== null) {
             $body['tag'] = $this->tag;
         }
 
-        return new Request('POST', 'https://auth.jumpcloud.com/authenticate', $headers, $body);
+        return new Request('POST', $this->endpoint, $headers, json_encode($body));
     }
 }

@@ -42,7 +42,14 @@ class Client
     ) {
         $this->credentialsProvider = $credentialsProvider;
         $this->logger = $logger ?: new NullLogger();
-        $this->client = $client ?: new GuzzleClient();
+
+        $this->client = $client ?: new GuzzleClient(
+            [
+                'timeout'            => 5,
+                'connection_timeout' => 2,
+            ]
+        );
+
         $this->requesthandler = new RequestHandler($this->logger);
     }
 

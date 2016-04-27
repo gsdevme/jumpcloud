@@ -2,3 +2,4 @@ vendor
 composer.lock
 bin
 examples
+node_modules

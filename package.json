@@ -1,0 +1,41 @@
+{
+  "name": "jumpcloud",
+  "version": "0.1.0",
+  "description": "Simple library to authenicate with Jumpclouds REST Authorization API",
+  "author": "Gavin Staniforth",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsdevme/jumpcloud-auth.git"
+  },
+  "devDependencies": {
+    "ghooks": "^1.0.3",
+    "validate-commit-msg": "^2.0.0",
+    "conventional-changelog": "^1.1.0"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 80
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

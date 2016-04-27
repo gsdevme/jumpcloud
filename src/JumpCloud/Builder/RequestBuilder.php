@@ -54,7 +54,6 @@ class RequestBuilder
     public function build()
     {
         $headers = [
-            'X-Client'     => Request::class,
             'Content-Type' => 'application/json',
             'x-api-key'    => $this->key,
         ];

@@ -7,11 +7,11 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response as HttpResponse;
 use JumpCloud\Authorization\AuthorizationResponse;
-use JumpCloud\Operation\Authenticate;
+use JumpCloud\Operation\Authorization;
 use JumpCloud\Provider\CredentialsProvider;
 use Mockery as m;
 
-class ClientAuthenticateTest extends \PHPUnit_Framework_TestCase
+class ClientAuthentionTest extends \PHPUnit_Framework_TestCase
 {
     public function testClient()
     {
@@ -37,7 +37,7 @@ class ClientAuthenticateTest extends \PHPUnit_Framework_TestCase
         );
 
         /** @var AuthorizationResponse $response */
-        $response = $client->send(new Authenticate('gavin', 'qwerty'));
+        $response = $client->send(new Authorization('gavin', 'qwerty', 'test-tag'));
         $this->assertTrue($response->isAuthorized());
     }
 
@@ -68,7 +68,7 @@ class ClientAuthenticateTest extends \PHPUnit_Framework_TestCase
         );
 
         /** @var AuthorizationResponse $response */
-        $response = $client->send(new Authenticate('gavin', 'qwerty'));
+        $response = $client->send(new Authorization('gavin', 'qwerty', 'test-tag'));
         $this->assertEquals($result, $response->isAuthorized());
     }
 

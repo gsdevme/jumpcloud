@@ -3,3 +3,4 @@ composer.lock
 bin
 examples
 node_modules
+coverage

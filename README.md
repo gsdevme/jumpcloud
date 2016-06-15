@@ -1,19 +1,20 @@
-# jumpcloud-auth
-Simple Library to Authenicate via Jumpclouds REST API 
+# jumpcloud
+Jumpcloud API
 
 ## Authorization API
 http://support.jumpcloud.com/knowledgebase/articles/455570
 
 ## Examples
 ```
-<?php
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$provider = new \JumpCloud\Provider\CredentialsProvider('api-key');
+$provider = new \JumpCloud\Provider\CredentialsProvider('my-api-key');
 $client = new \JumpCloud\Client($provider);
 
-$response = $client->authenticate('username', 'password');
+$operation = new \JumpCloud\Operation\Authenticate('username', 'password');
+
+/** @var \JumpCloud\Authorization\AuthorizationResponse $response */
+$response = $client->send($operation);
 
 if ($response->isAuthorized()) {
     echo 'Authorized!';

@@ -2,6 +2,8 @@
 
 namespace JumpCloud;
 
+use JumpCloud\Request\RequestHandler;
+
 class RequestHandlerTest extends \PHPUnit_Framework_TestCase
 {
     public function testInstance()

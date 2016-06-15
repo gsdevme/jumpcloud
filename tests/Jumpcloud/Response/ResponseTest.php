@@ -1,8 +1,6 @@
 <?php
 
-namespace JumpCloud;
-
-use JumpCloud\Response\Response;
+namespace JumpCloud\Response;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {

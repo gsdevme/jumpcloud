@@ -1,8 +1,6 @@
 <?php
 
-namespace JumpCloud;
-
-use JumpCloud\Request\RequestHandler;
+namespace JumpCloud\Request;
 
 class RequestHandlerTest extends \PHPUnit_Framework_TestCase
 {

@@ -23,11 +23,6 @@ class AuthorizationResponse implements ResponseInterface
     private $authorized;
 
     /**
-     * @var HttpResponse
-     */
-    private $response;
-
-    /**
      * AuthorizationResponse constructor.
      * @param HttpResponse $response
      * @param $authorized

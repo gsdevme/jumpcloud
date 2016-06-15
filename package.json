@@ -1,6 +1,6 @@
 {
   "name": "jumpcloud",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple library to authenicate with Jumpclouds REST Authorization API",
   "author": "Gavin Staniforth",
   "license": "MIT",

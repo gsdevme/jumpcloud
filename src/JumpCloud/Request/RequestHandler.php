@@ -47,6 +47,16 @@ class RequestHandler
                 )
             );
         } catch (\Exception $e) {
+            $this->logger->debug(
+                sprintf('Exception thrown during Guzzle request'),
+                [
+                    'message' => $e->getMessage(),
+                    'line' => $e->getLine(),
+                    'file' => $e->getFile(),
+                    'trace' => $e->getTraceAsString()
+                ]
+            );
+
             $response = new Response(500);
 
             if ($e instanceof ClientException) {

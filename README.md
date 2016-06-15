@@ -5,6 +5,7 @@ Jumpcloud API
 [![Build Status](https://travis-ci.org/gsdevme/jumpcloud.svg?branch=develop)](https://travis-ci.org/gsdevme/jumpcloud)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/build-status/master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/440d2b0e-5a6f-441d-adfc-485cf933c19b/small.png)](https://insight.sensiolabs.com/projects/440d2b0e-5a6f-441d-adfc-485cf933c19b)
 
 ### Develop
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/?branch=develop)

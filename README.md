@@ -1,6 +1,10 @@
 # jumpcloud
 Jumpcloud API
 
+[![Build Status](https://travis-ci.org/gsdevme/jumpcloud.svg?branch=develop)](https://travis-ci.org/gsdevme/jumpcloud)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/?branch=develop)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/gsdevme/jumpcloud/?branch=master)
+
 ## Authorization API
 http://support.jumpcloud.com/knowledgebase/articles/455570
 

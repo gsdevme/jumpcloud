@@ -8,7 +8,7 @@ use JumpCloud\Request\Request;
 use JumpCloud\Request\RequestInterface;
 
 /**
- * Class Authenticate
+ * Class Authorization
  * @package JumpCloud\Operation
  */
 class Authorization implements RequestInterface, AuthorizationRequestInterface

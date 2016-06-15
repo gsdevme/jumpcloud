@@ -1,4 +1,4 @@
-# Jumpcloud
+# jumpcloud
 Jumpcloud API
 
 ### Master

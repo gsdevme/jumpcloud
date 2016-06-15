@@ -22,6 +22,9 @@ class Response implements ResponseInterface
         return $this->response->getBody();
     }
 
+    /**
+     * @return int
+     */
     public function getStatusCode()
     {
         return $this->response->getStatusCode();

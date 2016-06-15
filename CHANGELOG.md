@@ -1,3 +1,18 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/gsdevme/jumpcloud-auth/compare/0.1.0...v1.0.1) (2016-06-15)
+
+
+### Bug Fixes
+
+* fixes an issue with php5.x([1870277](https://github.com/gsdevme/jumpcloud-auth/commit/1870277))
+
+
+### Features
+
+* improved api design, allows support for future operations([3733e4a](https://github.com/gsdevme/jumpcloud-auth/commit/3733e4a))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/gsdevme/jumpcloud-auth/compare/0.1.0...v1.0.0) (2016-06-15)
 

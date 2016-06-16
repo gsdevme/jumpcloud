@@ -9,6 +9,7 @@ use GuzzleHttp\Psr7\Response;
 use JumpCloud\Response\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
+use Webmozart\Json\JsonEncoder;
 
 /**
  * Class RequestHandler
@@ -17,8 +18,15 @@ use Psr\Log\NullLogger;
  */
 class RequestHandler
 {
-    /** @var LoggerInterface */
+    /**
+     * @var NullLogger
+     */
     private $logger;
+
+    /**
+     * @var JsonEncoder
+     */
+    private $jsonEncoder;
 
     /**
      * RequestHandler constructor.
@@ -28,6 +36,7 @@ class RequestHandler
     public function __construct(LoggerInterface $logger = null)
     {
         $this->logger = $logger ?: new NullLogger();
+        $this->jsonEncoder = new JsonEncoder();
     }
 
     /**
@@ -43,7 +52,7 @@ class RequestHandler
                     $request->getMethod(),
                     $request->getUri(),
                     $request->getHeaders(),
-                    \GuzzleHttp\json_encode($request->getBody())
+                    $this->jsonEncoder->encode($request->getBody())
                 )
             );
         } catch (\Exception $e) {

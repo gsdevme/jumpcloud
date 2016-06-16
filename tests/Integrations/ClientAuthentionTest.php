@@ -6,7 +6,7 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response as HttpResponse;
-use JumpCloud\Authorization\AuthorizationResponse;
+use JumpCloud\Response\AuthorizationResponse;
 use JumpCloud\Operation\Authorization;
 use JumpCloud\Provider\CredentialsProvider;
 use Mockery as m;

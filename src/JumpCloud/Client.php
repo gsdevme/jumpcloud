@@ -4,7 +4,7 @@ namespace JumpCloud;
 
 use GuzzleHttp\Client as GuzzleClient;
 use JumpCloud\Provider\CredentialsProviderInterface;
-use JumpCloud\Request\RequestHandler;
+use JumpCloud\Handler\RequestHandler;
 use JumpCloud\Request\RequestInterface;
 use JumpCloud\Response\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -62,6 +62,7 @@ class Client
     public function send(RequestInterface $request)
     {
         $request->addHeader('x-api-key', $this->credentialsProvider->getKey());
+        $request->addHeader('content-type', 'application/json');
 
         return $this->requesthandler->handle($this->client, $request);
     }

@@ -1,14 +1,12 @@
 <?php
 
-namespace JumpCloud\Authorization;
+namespace JumpCloud\Response;
 
 use GuzzleHttp\Psr7\Response as HttpResponse;
-use JumpCloud\Response\ResponseInterface;
-use JumpCloud\Response\ResponseTrait;
 
 /**
  * Class AuthorizationResponse
- * @package JumpCloud\Authorization
+ * @package JumpCloud\Response
  */
 class AuthorizationResponse implements ResponseInterface
 {

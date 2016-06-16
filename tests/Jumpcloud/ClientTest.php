@@ -44,6 +44,10 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->withArgs(['x-api-key', 'wiggle']);
 
         $request
+            ->shouldReceive('addHeader')
+            ->withArgs(['content-type', 'application/json']);
+
+        $request
             ->shouldReceive('getHeaders')
             ->andReturn(['x-api-key', 'wiggle']);
 

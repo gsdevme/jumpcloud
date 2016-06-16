@@ -1,14 +1,13 @@
 <?php
 
-namespace JumpCloud\Authorization;
+namespace JumpCloud\Factory;
 
 use GuzzleHttp\Psr7\Response;
-use JumpCloud\Response\ResponseFactoryInterface;
-
+use JumpCloud\Response\AuthorizationResponse;
 
 /**
  * Class AuthorizationResponseFactory
- * @package JumpCloud\Authorization
+ * @package JumpCloud\Factory
  */
 class AuthorizationResponseFactory implements ResponseFactoryInterface
 {

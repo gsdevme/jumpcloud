@@ -1,11 +1,12 @@
 <?php
 
-namespace JumpCloud\Request;
+namespace JumpCloud\Handler;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request as HttpRequest;
 use GuzzleHttp\Psr7\Response;
+use JumpCloud\Request\RequestInterface;
 use JumpCloud\Response\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;

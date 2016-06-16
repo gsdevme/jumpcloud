@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpCloud\Response;
+namespace JumpCloud\Factory;
 
 use GuzzleHttp\Psr7\Response;
 

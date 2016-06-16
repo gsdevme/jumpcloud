@@ -1,3 +1,20 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/gsdevme/jumpcloud-auth/compare/1.0.1...v1.1.0) (2016-06-16)
+
+
+### Bug Fixes
+
+* correct docblock class name([dc379fa](https://github.com/gsdevme/jumpcloud-auth/commit/dc379fa))
+* removes phpunit from require([7b20d25](https://github.com/gsdevme/jumpcloud-auth/commit/7b20d25))
+
+
+### Features
+
+* adds logging for exceptions in the request handler([fe24d64](https://github.com/gsdevme/jumpcloud-auth/commit/fe24d64))
+* replace json_encode with Webmozart package([1402bf1](https://github.com/gsdevme/jumpcloud-auth/commit/1402bf1))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/gsdevme/jumpcloud-auth/compare/0.1.0...v1.0.1) (2016-06-15)
 

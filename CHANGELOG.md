@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/gsdevme/jumpcloud/compare/1.1.0...v1.2.0) (2016-06-22)
+
+
+### Features
+
+* adds basic system api([380c606](https://github.com/gsdevme/jumpcloud/commit/380c606))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/gsdevme/jumpcloud-auth/compare/1.0.1...v1.1.0) (2016-06-16)
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace JumpCloud\Authorization;
+namespace JumpCloud\Request;
 
 /**
  * Interface AuthorizationRequestInterface
- * @package JumpCloud\Authorization
+ * @package JumpCloud\Request
  */
 interface AuthorizationRequestInterface
 {

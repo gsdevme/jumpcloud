@@ -18,6 +18,7 @@ http://support.jumpcloud.com/knowledgebase/articles/455570
 
 ## Examples
 ```
+// login
 require __DIR__ . '/../vendor/autoload.php';
 
 $provider = new \JumpCloud\Provider\CredentialsProvider('my-api-key');
@@ -33,4 +34,20 @@ if ($response->isAuthorized()) {
 } else {
     echo 'Not Authorized!';
 }
+```
+
+
+```
+// Get all systems
+require __DIR__ . '/../vendor/autoload.php';
+
+$provider = new \JumpCloud\Provider\CredentialsProvider('my-api-key');
+$client = new \JumpCloud\Client($provider);
+
+$operation = new \JumpCloud\Operation\Systems();
+
+/** @var \JumpCloud\Response\MultiformatResponse $response */
+$response = $client->send($operation);
+
+print_r($response->getData());
 ```

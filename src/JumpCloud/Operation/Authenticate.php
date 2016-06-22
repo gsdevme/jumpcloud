@@ -2,8 +2,8 @@
 
 namespace JumpCloud\Operation;
 
-use JumpCloud\Authorization\AuthorizationRequestInterface;
-use JumpCloud\Authorization\AuthorizationResponseFactory;
+use JumpCloud\Request\AuthorizationRequestInterface;
+use JumpCloud\Factory\AuthorizationResponseFactory;
 use JumpCloud\Request\Request;
 use JumpCloud\Request\RequestInterface;
 
@@ -30,7 +30,7 @@ class Authenticate implements RequestInterface, AuthorizationRequestInterface
             ]
         );
 
-        $request->setUri(self::ENDPOINT);
+        $request->setUri(AuthorizationRequestInterface::ENDPOINT);
         $request->setResponseFactory(new AuthorizationResponseFactory());
 
         $this->request = $request;

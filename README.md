@@ -16,6 +16,9 @@ Jumpcloud API
 ## Authorization API
 http://support.jumpcloud.com/knowledgebase/articles/455570
 
+## API
+https://github.com/TheJumpCloud/JumpCloudAPI
+
 ## Examples
 ```
 // login

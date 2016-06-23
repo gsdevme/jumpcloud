@@ -1,7 +1,11 @@
 language: php
 php:
+  - '5.5'
   - '5.6'
   - '7.0'
+  - hhvm
+  - nightly
 before_script:
   - composer install --prefer-source --no-interaction --dev
-script: bin/phpunit
+  - wget https://scrutinizer-ci.com/ocular.phar
+script: phpunit --coverage-clover=coverage.clover && php ocular.phar code-coverage:upload --format=php-clover coverage.clover

@@ -4,3 +4,4 @@ bin
 examples
 node_modules
 coverage
+phpunit.xml

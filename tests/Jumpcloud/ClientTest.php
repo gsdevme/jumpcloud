@@ -5,7 +5,7 @@ namespace JumpCloud;
 use JumpCloud\Provider\CredentialsProvider;
 use JumpCloud\Provider\CredentialsProviderInterface;
 use JumpCloud\Request\RequestInterface;
-use JumpCloud\Response\ResponseFactoryInterface;
+use JumpCloud\Factory\ResponseFactoryInterface;
 use JumpCloud\Response\ResponseInterface;
 use Mockery as m;
 
@@ -25,6 +25,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $this->provider = m::mock(CredentialsProviderInterface::class)->shouldIgnoreMissing();
         $this->client = new Client($this->provider);
+    }
+
+    public function tearDown()
+    {
+        m::close();
     }
 
     public function testInstance()

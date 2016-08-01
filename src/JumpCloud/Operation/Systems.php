@@ -2,11 +2,12 @@
 
 namespace JumpCloud\Operation;
 
-use JumpCloud\Factory\MultiformatResponseFactory;
+use JumpCloud\Factory\SystemsResponseFactory;
 use JumpCloud\Fields\NoopFields;
 use JumpCloud\Request\Request;
 use JumpCloud\Request\RequestInterface;
 use JumpCloud\Request\SystemRequestInterface;
+use JumpCloud\Response\SystemsResponse;
 
 /**
  * Class Authenticate
@@ -27,7 +28,7 @@ class Systems implements RequestInterface, SystemRequestInterface
         $request = new Request();
         $request->setUri(SystemRequestInterface::ENDPOINT);
         $request->setMethod('POST');
-        $request->setResponseFactory(new MultiformatResponseFactory());
+        $request->setResponseFactory(new SystemsResponseFactory());
 
         $this->fields = new NoopFields();
 

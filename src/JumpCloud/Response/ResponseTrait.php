@@ -7,7 +7,7 @@ use GuzzleHttp\Psr7\Response as HttpResponse;
 trait ResponseTrait
 {
     /** @var HttpResponse */
-    private $response;
+    protected $response;
 
     /**
      * @return \GuzzleHttp\Psr7\Stream|\Psr\Http\Message\StreamInterface

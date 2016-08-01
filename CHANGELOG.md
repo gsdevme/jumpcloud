@@ -1,3 +1,18 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/gsdevme/jumpcloud/compare/1.2.0...v1.5.0) (2016-08-01)
+
+
+### Bug Fixes
+
+* corrects a docblock ([9096448](https://github.com/gsdevme/jumpcloud/commit/9096448))
+
+
+### Features
+
+* improve the api for the systems ([6a7c309](https://github.com/gsdevme/jumpcloud/commit/6a7c309))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/gsdevme/jumpcloud/compare/1.1.0...v1.2.0) (2016-06-22)
 

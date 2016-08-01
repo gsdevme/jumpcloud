@@ -50,8 +50,8 @@ $client = new \JumpCloud\Client($provider);
 
 $operation = new \JumpCloud\Operation\Systems();
 
-/** @var \JumpCloud\Response\MultiformatResponse $response */
+/** @var \JumpCloud\Response\SystemsResponse $response */
 $response = $client->send($operation);
 
-print_r($response->getData());
+print_r($response->getCollection());
 ```

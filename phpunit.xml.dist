@@ -10,7 +10,7 @@
         convertWarningsToExceptions="true"
         processIsolation="true"
         strict="true"
-        bootstrap="tests/bootstrap.php"
+        bootstrap="autoload.php.dist"
         verbose="true">
     <logging>
         <log type="coverage-html" target="coverage" charset="UTF-8"

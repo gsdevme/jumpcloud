@@ -8,15 +8,19 @@ use Gsdev\Fabric\Model\Request\HeaderRequestInterface;
 use Gsdev\Fabric\Model\Request\RequestInterface;
 use Gsdev\Fabric\Model\Request\RequestOptionsInterface;
 use Gsdev\Fabric\Model\Request\RequestResponseInterface;
+use Gsdev\Fabric\Model\Request\ValidateResponseDataRequestInterface;
+use Gsdev\Fabric\Model\Validator\ValidatorInterface;
 use Jumpcloud\Model\JumpcloudCredentials;
 use Jumpcloud\Response\IsAuthenticatedResponse;
+use Jumpcloud\Validator\IsSuccessfulResponseCodeValidator;
 
 class IsAuthenticatedRequest implements
     RequestInterface,
     HeaderRequestInterface,
     BodyRequestInterface,
     RequestResponseInterface,
-    RequestOptionsInterface
+    RequestOptionsInterface,
+    ValidateResponseDataRequestInterface
 {
     use PostRequestTrait;
 
@@ -88,6 +92,13 @@ class IsAuthenticatedRequest implements
     {
         return [
             'exceptions' => false,
+            'timeout' => 5,
+            'connection_timeout' => 2
         ];
+    }
+
+    public function getValidator(): ValidatorInterface
+    {
+        return new IsSuccessfulResponseCodeValidator();
     }
 }

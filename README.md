@@ -22,36 +22,26 @@ https://github.com/TheJumpCloud/JumpCloudAPI
 
 ## Examples
 ```
-// login
+<?php
+
 require __DIR__ . '/../vendor/autoload.php';
 
-$provider = new \JumpCloud\Provider\CredentialsProvider('my-api-key');
-$client = new \JumpCloud\Client($provider);
+use Jumpcloud\Model\JumpcloudCredentials;
+use Jumpcloud\Request\IsAuthenticatedRequest;
+use Gsdev\Fabric\Bridge\Guzzle\GuzzleClient;
+use Jumpcloud\Response\IsAuthenticatedResponse;
 
-$operation = new \JumpCloud\Operation\Authenticate('username', 'password');
+$client = new GuzzleClient();
 
-/** @var \JumpCloud\Authorization\AuthorizationResponse $response */
-$response = $client->send($operation);
+$credentials = new JumpcloudCredentials(getenv('JUMPCLOUD_API_KEY'));
 
-if ($response->isAuthorized()) {
-    echo 'Authorized!';
+$request = new IsAuthenticatedRequest($credentials, 'username', 'password1234');
+
+$response = $client->send($request);
+
+if ($response instanceof IsAuthenticatedResponse && $response->isAuthenticated()) {
+    echo 'Authenticated';
 } else {
-    echo 'Not Authorized!';
+    echo 'Not Authenticated';
 }
-```
-
-
-```
-// Get all systems
-require __DIR__ . '/../vendor/autoload.php';
-
-$provider = new \JumpCloud\Provider\CredentialsProvider('my-api-key');
-$client = new \JumpCloud\Client($provider);
-
-$operation = new \JumpCloud\Operation\Systems();
-
-/** @var \JumpCloud\Response\SystemsResponse $response */
-$response = $client->send($operation);
-
-print_r($response->getCollection());
 ```
